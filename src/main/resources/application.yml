@@ -1,2 +1,21 @@
+eureka:
+  client:
+    serviceUrl:
+          defaultZone: http://192.168.1.122:8761/eureka/
+    registerWithEureka: true
+    fetchRegistry: true
+
 teknei:
   logfile: /usr/local/teknei/logs/status.log
+  alarm-client-name: alarmClient
+  alarm-server-url: http://172.17.0.122:8090/tkn-api/reply-alarm
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost/SITM
+    username: postgres
+    password: 4c4t3k
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
